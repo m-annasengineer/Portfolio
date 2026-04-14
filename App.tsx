@@ -554,7 +554,7 @@ const Footer = () => {
         <div className="flex items-center gap-8">
           <a href="https://www.linkedin.com/in/muhammad-annas-38422b403/" target = "_blank" className="text-text-muted hover:text-teal text-sm transition-colors">LinkedIn</a>
           <a href="https://github.com/m-annasengineer" target = "_blank" className="text-text-muted hover:text-teal text-sm transition-colors">GitHub</a>
-          <a href="m.annas.engineer@gmail.com" className="text-text-muted hover:text-teal text-sm transition-colors">Email</a>
+          <a href="mailto:m.annas.engineer@gmail.com" className="text-text-muted hover:text-teal text-sm transition-colors">Email</a>
         </div>
       </div>
     </footer>
