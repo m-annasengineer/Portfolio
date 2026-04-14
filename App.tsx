@@ -544,17 +544,40 @@ const Contact = () => {
 };
 
 const Footer = () => {
+  // External link kholne ka function
+  const openLink = (e: React.MouseEvent, url: string) => {
+    e.preventDefault(); // Default scroll behavior ko rokne ke liye
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   return (
-    <footer className="py-12 border-t border-border-subtle">
+    <footer className="py-12 border-t border-border-subtle relative z-50">
       <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
         <div className="text-text-muted text-sm">
           © 2026 Muhammad Annas. All rights reserved.
         </div>
         
         <div className="flex items-center gap-8">
-          <a href="https://www.linkedin.com/in/muhammad-annas-38422b403/" target = "_blank" className="text-text-muted hover:text-teal text-sm transition-colors">LinkedIn</a>
-          <a href="https://github.com/m-annasengineer" target = "_blank" className="text-text-muted hover:text-teal text-sm transition-colors">GitHub</a>
-          <a href="mailto:m.annas.engineer@gmail.com" className="text-text-muted hover:text-teal text-sm transition-colors">Email</a>
+          <button 
+            onClick={(e) => openLink(e, "https://www.linkedin.com/in/muhammad-annas-38422b403/")}
+            className="text-text-muted hover:text-teal text-sm transition-colors cursor-pointer bg-transparent border-none"
+          >
+            LinkedIn
+          </button>
+
+          <button 
+            onClick={(e) => openLink(e, "https://github.com/m-annasengineer")}
+            className="text-text-muted hover:text-teal text-sm transition-colors cursor-pointer bg-transparent border-none"
+          >
+            GitHub
+          </button>
+
+          <button 
+            onClick={() => window.location.href = "mailto:m.annas.engineer@gmail.com"}
+            className="text-text-muted hover:text-teal text-sm transition-colors cursor-pointer bg-transparent border-none"
+          >
+            Email
+          </button>
         </div>
       </div>
     </footer>
